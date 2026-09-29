@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Outlet, Link } from 'react-router-dom'
 import { LuMenu, LuX } from 'react-icons/lu'
-
+import Logo from "/imgs/webnest-logo-dark.jpeg"
 
 const HomeLayout = () => {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
@@ -30,10 +30,14 @@ const HomeLayout = () => {
 
   return (
     <div className='w-full min-h-screen flex flex-col items-center gap-4'>
-        <header className='w-full h-20 flex justify-center items-center px-12 bg-slate-950'>
-            <div className='w-full h-full flex justify-between items-center'>
-                <div className='text-slate-300'>
-                    Logo
+        <header className='w-full h-15 flex items-center justify-center bg-white'>
+            <div className='w-[95%] h-full flex justify-between items-center mt-4'
+            >
+                <div>
+                    <img src= {Logo}
+                     alt="webnest Africa"
+                      className='w-14 h-14 rounded-full'
+                      />
                 </div>
 
                 {
@@ -43,16 +47,16 @@ const HomeLayout = () => {
                     
                     (
                         <>
-                    <nav className='flex justify-center items-center gap-6 capitalize text-slate-300'>
+                    <nav className='flex justify-center items-center gap-12 ml-16 capitalize text-[#1A1A68] text-md font-medium'>
                     <Link to={"/"} className='hover:underline'>home</Link>
-                    <Link to={"/"}>home</Link>
-                    <Link to={"/"}>home</Link>
-                    <Link to={"/"}>home</Link>
-                    <Link to={"/"}>home</Link>
+                    <Link to={"/school"}>ai for schools</Link>
+                    <Link to={"/business"}>business solutions</Link>
+                    <Link to={"/training"}>ai training</Link>
+                    <Link to={"/contact"}>contact</Link>
                 </nav>
 
                 <div>
-                    <button className='w-fit p-2 border border-slate-10 text-lg text-slate-100 rounded-md hover:bg-white hover:text-black transition-all'>start your journey</button>
+                    <button className='w-fit py-2 px-6 bg-[#26235E] text-md text-white font-semibold rounded-md hover:bg-slate/950 hover:bg-slate-950/90 transition-all'>start your journey</button>
                 </div>
                 </>
                     ) 
@@ -61,11 +65,21 @@ const HomeLayout = () => {
 
                 
             </div>
-
         </header>
-        <div className='min-h-screen py-2'>
+
+
+
+
+        <div className='min-h-screen'>
             <Outlet />
         </div>
+
+        <footer className='w-full h-16 flex justify-center items-center'>
+            <div className='w-4/5 flex items-center justify-between'>
+                <span className='text-black/55 capitalize'>webnest africa</span>
+                <span className='text-black/55 text-sm capitalize'>Home · Schools · Business · Training · Contact</span>
+            </div>
+        </footer>
     </div>
   )
 }
