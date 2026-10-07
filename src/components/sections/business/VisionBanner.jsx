@@ -1,6 +1,7 @@
 import React from 'react'
 import Banner from '@/components/ui/Banner'
 import { bannerData } from '@/data/bannerData'
+import Spacer from '@/components/ui/Spacer'
 
 const VisionBanner = () => {
   const {
@@ -10,8 +11,10 @@ const VisionBanner = () => {
     secondLink, 
     firstLinkText, 
     secondLinkText
-  } = bannerData["home"]
+  } = bannerData["school"]
   return (
+    <>
+        <Spacer height='150px' />
     <Banner
     title={title}
     text={text}
@@ -20,6 +23,7 @@ const VisionBanner = () => {
     secondLink={secondLink}
     secondLinkText={secondLinkText}
     />
+    </>
   )
 }
 

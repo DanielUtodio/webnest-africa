@@ -6,7 +6,7 @@ const Hero = () => {
   const { smallText, headingText, descriptionText, image, firstLink, firstLinkText, secondLink, secondLinkText } = heroData["home"]
   console.log(heroData)
   return (
-   <>
+   <div>
    <HeroBannerComponent
    smallText={smallText}
    headingText={headingText}
@@ -17,7 +17,7 @@ const Hero = () => {
    secondLink={secondLink}
    secondLinkText={secondLinkText}
    />
-   </>
+   </div>
   )
 }
 

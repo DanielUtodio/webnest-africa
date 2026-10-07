@@ -10,30 +10,29 @@ import {
 } 
 from "lucide-react"
 
-// import { LucideBarChart3 } from 'lucide-react';
 const miniProjects = [
   {
     title: "AI Chatbots",
     lucideIcon: LucideBot,
     fontAwesomeIcon: "fa-solid fa-robot",
     description: "Conversational agents designed to answer queries, automate support, and deliver interactive user experiences in real time.",
-    background: "bg-emerald-50",
-    color: "text-emerald-600",
+    background: "bg-amber-500",
+    color: "text-emerald-500",
   },
   {
     title: "AI-Powered Tools",
     lucideIcon: LucideWand2,
     fontAwesomeIcon: "fa-solid fa-wand-magic-sparkles",
     description: "Smart utilities leveraging machine learning models to automate tasks, generate content, and boost daily productivity.",
-    background: "",
+    background: "bg-rose-500",
     color: "C75000",
   },
   {
     title: "Web Applications",
     lucideIcon: LucideLayout,
     fontAwesomeIcon: "fa-solid fa-laptop-code",
-    description: "Full-stack, responsive web platforms engineered with modern frameworks to deliver intuitive and scalable web experiences.",
-    background: "",
+    description: "Full-stack, responsive web platforms engineefuchsia with modern frameworks to deliver intuitive and scalable web experiences.",
+    background: "bg-fuchsia-500",
     color: "FFC145",
   },
   {
@@ -41,7 +40,7 @@ const miniProjects = [
     lucideIcon: LucideBarChart3,
     fontAwesomeIcon: "fa-solid fa-chart-column",
     description: "Data-driven dashboards that process student performance metrics, highlight trends, and generate comprehensive progress reports.",
-    background: "",
+    background: "bg-green-500",
     color: "20FC8F",
   },
   {
@@ -49,7 +48,7 @@ const miniProjects = [
     lucideIcon: LucideBrainCircuit,
     fontAwesomeIcon: "fa-solid fa-user-gear",
     description: "Tailored virtual assistants built to organize daily schedules, manage tasks, and execute personalized voice or text commands.",
-    background: "",
+    background: "bg-lime-500",
     color: "C492B1",
   },
   {
@@ -57,75 +56,74 @@ const miniProjects = [
     lucideIcon: LucideScanFace,
     fontAwesomeIcon: "fa-solid fa-id-card-clip",
     description: "Automated check-in solutions using facial recognition or QR code verification for seamless real-time attendance tracking.",
-    background: "",
+    background: "bg-rose-500",
     color: "613F75",
-  }
+  }, 
 ];
 
-const roygbivThemes = [
-  { // Red
-    badge: "bg-rose-50 text-rose-600 ring-rose-100",
-    hoverBorder: "hover:border-rose-300",
-    hoverTitle: "group-hover:text-rose-600",
-    accent: "text-rose-600"
-  },
-  { // Orange
-    badge: "bg-orange-50 text-orange-600 ring-orange-100",
-    hoverBorder: "hover:border-orange-300",
-    hoverTitle: "group-hover:text-orange-600",
-    accent: "text-orange-600"
-  },
-  { // Yellow
-    badge: "bg-amber-50 text-amber-600 ring-amber-100",
-    hoverBorder: "hover:border-amber-300",
-    hoverTitle: "group-hover:text-amber-600",
-    accent: "text-amber-600"
-  },
-  { // Green
-    badge: "bg-emerald-50 text-emerald-600 ring-emerald-100",
-    hoverBorder: "hover:border-emerald-300",
-    hoverTitle: "group-hover:text-emerald-600",
-    accent: "text-emerald-600"
-  },
+const roygbivThemes =  [
   { // Blue
-    badge: "bg-sky-50 text-sky-600 ring-sky-100",
-    hoverBorder: "hover:border-sky-300",
-    hoverTitle: "group-hover:text-sky-600",
-    accent: "text-sky-600"
+    badge: "bg-amber-50 text-amber-500 ring-amber-100",
+    hoverBorder: "hover:border-amber-300",
+    hoverTitle: "group-hover:text-amber-500",
+    accent: "text-white"
   },
-  { // Indigo
-    badge: "bg-indigo-50 text-indigo-600 ring-indigo-100",
-    hoverBorder: "hover:border-indigo-300",
-    hoverTitle: "group-hover:text-indigo-600",
-    accent: "text-indigo-600"
+
+  { // Blue
+    badge: "bg-rose-50 text-rose-500 ring-rose-100",
+    hoverBorder: "hover:border-rose-300",
+    hoverTitle: "group-hover:text-rose-400",
+    accent: "text-white"
   },
-  { // Violet
-    badge: "bg-violet-50 text-violet-600 ring-violet-100",
-    hoverBorder: "hover:border-violet-300",
-    hoverTitle: "group-hover:text-violet-600",
-    accent: "text-violet-600"
+
+  { // Blue
+    badge: "bg-fuchsia-50 text-fuchsia-500 ring-fuchsia-100",
+    hoverBorder: "hover:border-fuchsia-300",
+    hoverTitle: "group-hover:text-fuchsia-500",
+    accent: "text-white"
+  },
+
+  { // Blue
+    badge: "bg-green-50 text-green-500 ring-green-100",
+    hoverBorder: "hover:border-green-300",
+    hoverTitle: "group-hover:text-green-500",
+    accent: "text-white"
+  },
+
+  { // Blue
+    badge: "bg-lime-50 text-lime-500 ring-lime-100",
+    hoverBorder: "hover:border-lime-300",
+    hoverTitle: "group-hover:text-lime-500",
+    accent: "text-white"
+  },
+
+  { // Blue
+    badge: "bg-rose-50 text-rose-500 ring-rose-100",
+    hoverBorder: "hover:border-rose-300",
+    hoverTitle: "group-hover:text-rose-500",
+    accent: "text-white"
   }
-];
+]
 
 
 const Card = ({ title, description, lucideIcon: Icon, background, color, theme })=> {
     return (
-        <div className='w-[95%] md:w-1/3 lg:w-80 min-h-32 lg:h-64 rounded-xl flex flex-col gap-2 shadow-sm p-4'>
-              <div className={`mb-5 inline-flex h-12 w-12 items-center justify-center rounded-md ${background} ${theme.badge}`} >
-              <Icon className={`h-6 w-6 `} />
+        <div className={`w-[95%] ${background} md:w-1/3 lg:w-90 min-min-h-32 lg:min-h-80 rounded-sm flex flex-col justify-center items-center gap-4 shadow-sm p-4 text-center`}>
+              <div className={`inline-flex h-20 w-20 items-center justify-center rounded-full ${theme.badge}`} >
+              <Icon className={`h-12 w-12`} />
             </div>
 
-            <h2 className={`${theme.accent} font-semibold`}>{title}</h2>
-            <p className='text-slate-400 text-md'>{description}</p>
+            <h2 className={`${theme.accent} text-xl font-semibold`}>{title}</h2>
+            <p className='text-white text-md tracking-normal'>{description}</p>
         </div>
     )   
 }
 
 const ChildProject = () => {
   return (
-    <div className='w-full min-h-max py-4 px-12 flex flex-col gap-4'>
+    <div className='w-full min-h-max py-16 px-16 flex flex-col gap-4 bg-gray-50/10'>
         <h1 className='text-3xl font-medium'>What can your child build with AI?</h1><br />
-        <div className='w-full h-max flex flex-col md:flex md:flex-row justify-between md:flex-wrap gap-10 items-center'>
+        <div className='w-full h-max flex flex-col md:flex md:flex-row md:flex-wrap gap-10 items-center'>
             {
                 miniProjects.map((p, i)=> {
                   const theme = roygbivThemes[i % roygbivThemes.length]
@@ -133,6 +131,7 @@ const ChildProject = () => {
                         <Card
                           key={i}
                           {...p} 
+                          background={p.background}
                           theme={theme}
                           />
                     )

@@ -30,8 +30,8 @@ const HomeLayout = () => {
 
   return (
     <div className='w-full min-h-screen flex flex-col items-center gap-4'>
-        <header className='w-full h-15 flex items-center justify-center bg-white'>
-            <div className='w-[95%] h-full flex justify-between items-center mt-4'
+        <header className='w-full h-24 flex items-center justify-center sticky top-0 z-1000 bg-white border-b border-indigo-100/20'>
+            <div className='w-[90%] h-full flex justify-between items-center mt-4'
             >
                 <div>
                     <img src= {Logo}
@@ -47,7 +47,7 @@ const HomeLayout = () => {
                     
                     (
                         <>
-                    <nav className='flex justify-center items-center gap-12 ml-16 capitalize text-[#1A1A68] text-md font-medium'>
+                    <nav className='flex justify-center items-center gap-8 ml-16 capitalize text-[#1A1A68] text-md font-medium'>
                     <Link to={"/"} className='hover:underline'>home</Link>
                     <Link to={"/school"}>ai for schools</Link>
                     <Link to={"/business"}>business solutions</Link>
